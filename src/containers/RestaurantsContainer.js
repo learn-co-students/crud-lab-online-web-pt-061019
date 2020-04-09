@@ -16,4 +16,6 @@ class RestaurantsContainer extends Component {
 
 const mapStateToProps = (state) => ({ restaurants: state.restaurants });
 
-export default connect(mapStateToProps)(RestaurantsContainer);
+export default connect(mapStateToProps, { addRestaurant, deleteRestaurant })(
+  RestaurantsContainer
+);
