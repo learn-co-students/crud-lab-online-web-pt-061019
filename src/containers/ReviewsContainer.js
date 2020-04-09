@@ -14,6 +14,8 @@ class ReviewsContainer extends Component {
   }
 }
 
-const mapStateToProps = (state) => ({ containers: state.containers });
+const mapStateToProps = (state) => ({ reviews: state.reviews });
 
-export default connect(mapStateToProps)(ReviewsContainer);
+export default connect(mapStateToProps, { addReview, deleteReview })(
+  ReviewsContainer
+);
