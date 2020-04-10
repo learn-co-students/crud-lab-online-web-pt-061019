@@ -19,7 +19,7 @@ export default function manageRestaurants(
       return {
         ...state,
         restaurants: state.restaurants.filter(
-          (restaurant) => restaurant.id !== action.id
+          (restaurant) => restaurant.id !== action.restaurantId
         ),
       };
 
