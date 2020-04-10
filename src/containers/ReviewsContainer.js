@@ -6,10 +6,12 @@ import { addReview, deleteReview } from '../actions/reviews'
 
 class ReviewsContainer extends Component {
 
+
+
   render() {
     return (
       <div>
-        <ReviewInput add={this.props.addReview} restaurant={this.props.restaurant}/>
+        <ReviewInput add={this.props.addReview} restaurantId={this.props.restaurant.id}/>
         <Reviews reviews={this.props.reviews} delete={this.props.deleteReview} restaurant={this.props.restaurant}/>
       </div>
     )

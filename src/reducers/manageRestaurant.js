@@ -20,7 +20,7 @@ export default function manageRestaurants(state = {restaurants: [], reviews: []}
         restaurants: new_rest_arr
       }
       // return state.filter(quote => quote.id !== action.quoteId)
-    case 'ADD_REVEW':
+    case 'ADD_REVIEW':
       // debugger
       const review = {
         id: cuid(),
