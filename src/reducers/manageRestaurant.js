@@ -11,7 +11,7 @@ export default function manageRestaurants(
         ...state,
         restaurants: [
           ...state.restaurants,
-          { text: action.restaurant.text, id: cuidFn() },
+          { text: action.text, id: cuidFn() },
         ],
       };
 
@@ -25,7 +25,7 @@ export default function manageRestaurants(
 
     case "ADD_REVIEW":
       const review = {
-        text: action.review.text,
+        text: action.text,
         id: cuidFn,
         restaurantId: action.restaurantId,
       };

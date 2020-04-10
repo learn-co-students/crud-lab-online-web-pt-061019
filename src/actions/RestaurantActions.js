@@ -1,13 +1,13 @@
-export const addRestaurant = (restaurant) => {
+export const addRestaurant = (text) => {
   return {
     type: "ADD_RESTAURANT",
-    restaurant,
+    text,
   };
 };
 
-export const deleteRestaurant = (restaurauntId) => {
+export const deleteRestaurant = (restaurantId) => {
   return {
     type: "DELETE_RESTAURANT",
-    restaurauntId,
+    restaurantId,
   };
 };

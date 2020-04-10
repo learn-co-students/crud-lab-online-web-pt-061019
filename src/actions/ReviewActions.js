@@ -1,7 +1,7 @@
-export const addReview = (review) => {
+export const addReview = (text) => {
   return {
     type: "ADD_REVIEW",
-    review,
+    text,
   };
 };
 
