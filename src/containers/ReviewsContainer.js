@@ -6,15 +6,19 @@ import { addReview, deleteReview } from "../actions/ReviewActions";
 
 class ReviewsContainer extends Component {
   render() {
+    //Could filter here and pass just the reviews needed instead of all
+    //of them.
     return (
       <div>
         <ReviewInput
           addReview={this.props.addReview}
-          restaurantId={this.props.restauraunt.id}
+          //This id comes from Restaurant component
+          restaurantId={this.props.restaurant.id}
         />
         <Reviews
           deleteReview={this.props.deleteReview}
           reviews={this.props.reviews}
+          restaurantId={this.props.restaurant.id}
         />
       </div>
     );
