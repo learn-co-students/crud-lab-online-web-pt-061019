@@ -11,7 +11,7 @@ export default function manageRestaurants(
         ...state,
         restaurants: [
           ...state.restaurants,
-          { text: action.text, id: cuidFn() },
+          { text: action.restaurant.text, id: cuidFn() },
         ],
       };
 

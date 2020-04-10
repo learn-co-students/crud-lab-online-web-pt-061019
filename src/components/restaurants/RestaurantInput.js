@@ -11,8 +11,28 @@ class RestaurantInput extends Component {
     });
   };
 
+  handleOnSubmit = (event) => {
+    event.preventDefault();
+    const restaurant = { ...this.state };
+    this.props.addRestaurant(restaurant);
+    this.setState({
+      text: "",
+    });
+  };
+
   render() {
-    return <div>Restaurant Input</div>;
+    return (
+      <div>
+        <form onSubmit={this.handleOnSubmit}>
+          <input
+            type="text"
+            value={this.state.text}
+            onChange={this.handleOnChange}
+          />
+          <input type="submit" />
+        </form>
+      </div>
+    );
   }
 }
 
