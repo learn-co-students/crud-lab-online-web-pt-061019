@@ -24,7 +24,7 @@ class ReviewInput extends Component {
 
     let obj = {
       ...this.state,
-      restaurant_id: this.props.restaurant.id
+      restaurantId: this.props.restaurant.id
     }
 
     this.props.addReview(obj)

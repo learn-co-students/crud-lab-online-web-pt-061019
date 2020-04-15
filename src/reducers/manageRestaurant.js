@@ -30,11 +30,11 @@ export default function manageRestaurants(state = {restaurants: [], reviews: []}
       }
 
     case 'ADD_REVIEW':
-      let newReview = { text: action.text, id: cuidFn(), restaurant_id: action.restaurant_id }
+      let newReview = { text: action.review.text, id: cuidFn(), restaurantId: action.review.restaurantId }
 
       return {
         ...state,
-        reviews: []
+        reviews: [...state.reviews, newReview]
       }
 
 
