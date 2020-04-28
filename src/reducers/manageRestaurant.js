@@ -30,7 +30,8 @@ export default function manageRestaurants(state = {restaurants: [], reviews: []}
       }
 
     case 'ADD_REVIEW':
-      let newReview = { text: action.review.text, id: cuidFn(), restaurantId: action.review.restaurantId }
+    // console.log(action) // {type: "ADD_REVIEW", text: "hhhhhhhh", restaurantId: "ck9kdp2qo00003h5zt5c8xzr8"}
+      let newReview = { text: action.text, id: cuidFn(), restaurantId: action.restaurantId }
 
       return {
         ...state,

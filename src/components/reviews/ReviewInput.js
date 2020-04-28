@@ -27,7 +27,9 @@ class ReviewInput extends Component {
       restaurantId: this.props.restaurant.id
     }
 
-    this.props.addReview(obj)
+    console.log(obj)
+
+    this.props.addReview(this.state.text, this.props.restaurant.id)
 
     this.setState({
       text: ''
