@@ -38,6 +38,15 @@ export default function manageRestaurants(state = {restaurants: [], reviews: []}
         reviews: [...state.reviews, newReview]
       }
 
+    case 'DELETE_REVIEW':
+    // console.log(action) // {type: "ADD_REVIEW", text: "hhhhhhhh", restaurantId: "ck9kdp2qo00003h5zt5c8xzr8"}
+      console.log("Boop")
+      let reviews = state.reviews.filter(review => review.id !== action.id)
+      console.log(reviews)
+      return {
+        ...state,
+        reviews: reviews
+      }
 
     default:
       return state
