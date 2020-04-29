@@ -6,7 +6,7 @@ class Restaurants extends Component {
     const { restaurants, deleteRestaurant } = this.props;
     return(
       <ul>
-        {this.props.restaurants.map(restaurant => <Restaurant restaurant={restaurant} deleteRestaurant={deleteRestaurant} />)}
+        {this.props.restaurants.map(r => <Restaurant restaurant={r} deleteRestaurant={deleteRestaurant} key={r.id}/>)}
       </ul>
     );
   }

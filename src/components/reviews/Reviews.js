@@ -10,7 +10,7 @@ class Reviews extends Component {
     let allReviews = this.props.reviews.filter(review => review.restaurantId == this.props.restaurantId)
     return (
       <ul>
-        {allReviews.map(r => <Review review={r} key={r} deleteReview={this.props.deleteReview}/>)}
+        {allReviews.map(r => <Review review={r} key={r.text} deleteReview={this.props.deleteReview}/>)}
       </ul>
     );
   }
